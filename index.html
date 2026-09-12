@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KERNEL — El Núcleo de la Democracia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#030712',
+                        matrix: '#00ff66',
+                        cyber: '#00f0ff',
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #030712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .glow-matrix {
+            text-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
+        }
+        .glow-cyber {
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3));
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between scanline relative selection:bg-matrix selection:text-void">
+
+    <!-- Elementos de fondo cyberpunk -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(0,240,255,0.07),transparent_50%)] pointer-events-none"></div>
+
+    <!-- Cabecera / Navbar -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-8 flex justify-between items-center z-10">
+        <div class="flex items-center space-x-3">
+            <div class="w-3 h-3 bg-matrix animate-ping rounded-full"></div>
+            <span class="text-xl font-extrabold tracking-widest text-white">KERNEL<span class="text-matrix">.SYS</span></span>
+        </div>
+        <div class="text-xs text-cyber border border-cyber/30 px-3 py-1 rounded bg-cyber/10 tracking-wider">
+            ESTADO: COMPILANDO_FUTURO
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-12 z-10 text-center">
+        <div class="inline-block mb-6 px-4 py-1 rounded-full border border-matrix/40 bg-matrix/5 text-matrix text-xs tracking-widest uppercase">
+            // Democracia Participativa v3.0
+        </div>
+
+        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight">
+            LA LÓGICA REEMPLAZA <br class="hidden md:inline">AL <span class="text-cyber glow-cyber">DOGMA</span>.
+        </h1>
+
+        <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+            Estamos construyendo la infraestructura política del año 2030. Un sistema descentralizado, transparente y basado en datos reales donde cada ciudadano es parte del núcleo de decisión.
+        </p>
+
+        <!-- Bloque de Código en Obras -->
+        <div class="bg-gray-900/80 border border-gray-800 rounded-lg p-6 text-left max-w-xl mx-auto mb-12 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-800 text-xs text-gray-500">
+                <span class="flex items-center space-x-2">
+                    <span class="w-2 h-2 rounded-full bg-red-500 inline-block"></span>
+                    <span class="w-2 h-2 rounded-full bg-yellow-500 inline-block"></span>
+                    <span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+                    <span class="ml-2 font-mono">kernel_init.sh</span>
+                </span>
+                <span class="text-matrix">PROGRESO: 84.2%</span>
+            </div>
+            <div class="space-y-2 font-mono text-xs md:text-sm text-gray-300">
+                <p><span class="text-cyber">></span> Cargando módulos de participación ciudadana...</p>
+                <p><span class="text-cyber">></span> Compilando motor de transparencia radical...</p>
+                <p class="text-matrix"><span class="text-gray-500">></span> [OK] Núcleo democrático listo para despliegue.</p>
+                <p class="animate-pulse text-gray-400"><span class="text-cyber">></span> Esperando conexión con el nodo central...<span class="inline-block w-2 h-4 bg-matrix ml-1 align-middle"></span></p>
+            </div>
+        </div>
+
+        <!-- Acceso / Newsletter disruptiva -->
+        <div class="max-w-md mx-auto">
+            <form onsubmit="event.preventDefault(); alert('Acceso registrado en el kernel.');" class="flex flex-col sm:flex-row gap-3">
+                <input type="email" placeholder="introduce_tu_correo@futuro.org" required class="flex-1 bg-gray-900/90 border border-gray-700 rounded px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-matrix transition-all">
+                <button type="submit" class="bg-matrix text-void font-bold px-6 py-3 rounded text-sm hover:bg-cyber transition-colors tracking-wider uppercase cursor-pointer">
+                    Sincronizar
+                </button>
+            </form>
+            <p class="text-[10px] text-gray-600 mt-3">Cero spam. Solo lógica política y actualizaciones del código fuente.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 z-10 border-t border-gray-900">
+        <p>© 2026 KERNEL. Todos los derechos reservados bajo código abierto.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+            <span class="hover:text-matrix transition-colors">git://kernel.democrat</span>
+            <span class="hover:text-cyber transition-colors">app://participacion</span>
+        </div>
+    </footer>
+
+</body>
+</html>
